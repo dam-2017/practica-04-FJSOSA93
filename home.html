@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <h1 class="title">Calculadora</h1>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+   <ion-item>       
+          <label>Resultado</label>
+          <input type="text" [(ngModel)]="Resultado.text" disabled >
+        </ion-item> 
+<form [formGroup]="Formulario">
+    <label>Ingrese dos numeros</label>
+      <ion-item>
+          <input ion-button round size="10" type="text" name="" value="" formControlName="no1" color="light" >
+          
+          <p *ngIf="Formulario.get('no1').hasError('required') && no1.touched" color="danger">Este campo es Requerido</p>
+
+          <input  ion-button round  size="2" type ="text" formControlName="estado" [(ngModel)]="estado.text" color="light" disabled>                  
+          <input  ion-button round  size="10" type ="text" name="" value="" formControlName="no2"  color="light">
+          
+          <p *ngIf="Formulario.get('no2').hasError('required') && no2.touched" color="danger">Este campo es Requerido</p>
+          
+      </ion-item>
+        
+        
+<ion-item>  
+      <button  ion-button icon-left  large (click)="suma()">+</button>
+      <button ion-button icon-righ  large (click)="resta()">-</button>
+</ion-item>
+<ion-item>               
+      <button ion-button icon-left large (click)="division()">/</button>
+      <button ion-button icon-righ large (click)="multiplicacion()">x</button>
+</ion-item>     
+            
+<ion-item>
+<button ion-button icon-left large (click)="modulo()">%</button>
+</ion-item>
+</form>
+</ion-content>
