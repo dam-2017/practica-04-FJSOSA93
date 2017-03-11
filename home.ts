@@ -1,3 +1,5 @@
+/*Practica 04 Autores: Francisco Javier Sosa  y alejandro rivas Hdz
+
 import { Component } from '@angular/core';
 import {FormControl,Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { NavController } from 'ionic-angular';
